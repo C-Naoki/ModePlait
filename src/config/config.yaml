@@ -1,0 +1,49 @@
+hydra:
+  run:
+    dir: out/logs/${now:%Y-%m-%d} # /${now:%H-%M-%S}
+  sweep:
+    dir: out/logs/${now:%Y-%m-%d}/multirun # /${now:%H-%M-%S}
+    subdir: ${hydra.job.num}
+  job:
+    chdir: False
+  job_logging:
+    version: 1
+    handlers:
+      console:
+        class: logging.StreamHandler
+        stream: ext://sys.stdout
+    formatters:
+      simple:
+        format: '%(message)s'
+
+defaults:
+  - _self_
+  - model: modeplait
+
+io:
+  input_dir: ???
+  uuid: ???
+  root_out_dir: out/
+  n: 500
+  d: 5
+  p: 0.5
+  seq_type: [0, 1, 2, 1, 0]
+  noise_type: laplace
+  graph_type: ER
+  seed: 4
+  tag: null
+
+prep:
+  logarithm: False
+  zscore: True
+  minmax_scale: False
+  normalize: False
+  whitenoise: 0
+  moving_average: 1
+
+no_gpu: True
+gpu: 0
+use_multi_gpu: False
+devices: "0,1,2,3"
+save: True
+verbose: True
