@@ -8,7 +8,6 @@
   - [Baselines](#baselines)
   - [Causal discovering accuracy score](#causal-discovering-accuracy-score)
   - [Forecasting accuracy score](#forecasting-accuracy-score)
-- [Contact](#contact)
 
 ## Introduction
 This is an official implementation of ModePlait. We focus on causal relationships that evolve over time in data streams and refer such relationships as "time-evolving causalities." We presented ModePlait, which aims to discover time-evolving causalities in multivariate co-evolving data streams, and forecast future values in a stream fashion simultaneously. The overview of our proposed model is following:
@@ -81,6 +80,3 @@ ModePlait achieved a high forecasting accuracy for every dataset, including synt
 <p align="center">
   <img src=".\docs\assets\forecasting.png" align=center />
 </p>
-
-## Contact
-If you have any questions or concerns, please submit an [issue](https://github.com/C-Naoki/ModePlait/issues) or contact us (naoki88@sanken.osaka-u.ac).
