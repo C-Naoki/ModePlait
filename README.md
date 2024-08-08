@@ -35,7 +35,7 @@ This is an official implementation of ModePlait. We focus on causal relationship
     make install
     ```
     - However, you are required to [pyenv](https://github.com/pyenv/pyenv#installation) and [poetry](https://python-poetry.org/docs/#installation) for above command to work.
-    - If you prefer not to use `pyenv` or `poetry`, you can also use [`requirements.txt`](https://github.com/C-Naoki/ModePlait/blob/master/requirements.txt) created based on pyproject.toml.
+    - If you prefer not to use `pyenv` or `poetry`, you can also use [`requirements.txt`](https://github.com/C-Naoki/ModePlait/blob/main/requirements.txt) created based on pyproject.toml.
 
     Specifically, the above command performs the following steps:
       1. if necessary, install Python 3.9.15 using pyenv, and then switch to this version.
@@ -43,7 +43,7 @@ This is an official implementation of ModePlait. We focus on causal relationship
       3. install packages in `pyproject.toml`.
       4. attach the path file (i.e., `*.pth`) in the `site-packages/` for extending module search path.
 
-      Please check the [`Makefile`](https://github.com/C-Naoki/ModePlait/blob/master/Makefile) for more details.
+      Please check the [`Makefile`](https://github.com/C-Naoki/ModePlait/blob/main/Makefile) for more details.
 
 3. Run quick demos of ModePlait
     ```bash
@@ -61,7 +61,7 @@ This is an official implementation of ModePlait. We focus on causal relationship
 2. web-search [[link]](https://trends.google.co.jp/trends/)
 3. chicken-dance, exercise [[link]](http://mocap.cs.cmu.edu/)
 
-(Other than `1. covid19`, everything is placed in the folder [`./data`](https://github.com/C-Naoki/ModePlait/blob/master/data))
+(Other than `1. covid19`, everything is placed in the folder [`./data`](https://github.com/C-Naoki/ModePlait/blob/main/data))
 
 ## Experiments
 ### Baselines
