@@ -61,7 +61,6 @@ class ModePlait(BaseModel):
             rgm_c_idx=self.rgm_c.idx,
         )
         if self.verbose:
-            print(f"regime {rgm_c.idx} is selected")
             print(f"{err:.3f} vs {self.err_th} (err vs threshold)")
         if err > self.err_th and len(self.regime_storage) < MAX_REGIMES:
             # new regime is not necessary to update.
