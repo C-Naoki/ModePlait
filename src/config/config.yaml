@@ -22,7 +22,7 @@ defaults:
 
 io:
   input_dir: ???
-  uuid: ???
+  uuid: 1
   root_out_dir: out/
   n: 500
   d: 5
@@ -30,7 +30,7 @@ io:
   seq_type: [0, 1, 2, 1, 0]
   noise_type: laplace
   graph_type: ER
-  seed: 4
+  seed: 42
   tag: null
 
 prep:

@@ -7,9 +7,14 @@ from sklearn import preprocessing as prep
 from tensorly.base import fold, unfold
 
 
-def preprocessing(data: np.ndarray, prep_cfg: DictConfig) -> np.ndarray:
-    if prep_cfg.moving_average > 1:
-        data = moving_average(data, prep_cfg.moving_average)
+def preprocessing(data: np.ndarray, cfg: DictConfig) -> np.ndarray:
+    prep_cfg = cfg.prep
+    if cfg.io.input_dir == "synthetics":
+        data = moving_average(X=data, window=50)
+    elif cfg.io.input_dir == "covid19":
+        data = moving_average(X=data, window=7)
+    elif prep_cfg.moving_average > 1:
+        data = moving_average(X=data, window=prep_cfg.moving_average)
 
     if prep_cfg.logarithm:
         data = log(data)
