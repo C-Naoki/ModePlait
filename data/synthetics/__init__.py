@@ -27,10 +27,6 @@ def load_data(**kwargs: dict) -> np.ndarray:
     W_ls = simulate_parameter(B_ls=B_ls, seq_type=seq_type, seeds=seeds)
     data = simulate_linear_sem(W_ls=W_ls, n=n, t_span=t_span, noise_type=noise_type)
 
-    if "date" not in data.columns:
-        data["date"] = pd.date_range(start="2021-01-01", periods=len(data), freq="D")
-        data.set_index("date", inplace=True)
-
     return data, W_ls
 
 

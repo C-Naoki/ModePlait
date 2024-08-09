@@ -13,10 +13,8 @@ def load_data(uuid: int, **kwargs: dict) -> np.ndarray:
     filepath = os.path.dirname(__file__)
 
     data = pd.read_csv(filepath + f"/No{uuid}.csv.gz")
-
-    if "date" not in data.columns:
-        data["date"] = pd.date_range(start='2004-1-1', periods=len(data), freq='W')
-        data.set_index("date", inplace=True)
+    data["date"] = pd.date_range(start="2004-1-1", periods=len(data), freq="W")
+    data.set_index("date", inplace=True)
 
     return data
 
