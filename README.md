@@ -6,11 +6,13 @@
 - [Datasets](#datasets)
 - [Experiments](#experiments)
   - [Baselines](#baselines)
-  - [Causal discovering accuracy score](#causal-discovering-accuracy-score)
-  - [Forecasting accuracy score](#forecasting-accuracy-score)
+  - [Q1. Causal discovering](#q1-causal-discovering)
+  - [Q2. Forecasting](#q2-forecasting)
+  - [Q3. Ablation study](#q3-ablation-study)
+  - [Experimental setup](#experimental-setup)
 
 ## Introduction
-This is an official implementation of ModePlait. We focus on causal relationships that evolve over time in data streams and refer such relationships as "time-evolving causalities." We presented ModePlait, which aims to discover time-evolving causalities in multivariate co-evolving data streams, and forecast future values in a stream fashion simultaneously. The overview of our proposed model is following:
+This is an official implementation of ModePlait. We focus on causal relationships that evolve over time in data streams and refer such relationships as "time-evolving causality." We presented ModePlait, which aims to discover time-evolving causalities in multivariate co-evolving data streams, and forecast future values in a stream fashion simultaneously. The overview of our proposed model is following:
 
 <p align="center">
   <img src=".\docs\assets\model.png" align=center />
@@ -34,7 +36,7 @@ This is an official implementation of ModePlait. We focus on causal relationship
     make install
     ```
     - However, you are required to [pyenv](https://github.com/pyenv/pyenv#installation) and [poetry](https://python-poetry.org/docs/#installation) for above command to work.
-    - If you prefer not to use `pyenv` or `poetry`, you can also use [`requirements.txt`](https://github.com/C-Naoki/ModePlait/blob/main/requirements.txt) created based on pyproject.toml.
+    - If you prefer not to use pyenv or poetry, you can also use [`requirements.txt`](https://github.com/C-Naoki/ModePlait/blob/main/requirements.txt) created based on pyproject.toml.
 
     Specifically, the above command performs the following steps:
       1. if necessary, install Python 3.9.15 using pyenv, and then switch to this version.
@@ -60,23 +62,35 @@ This is an official implementation of ModePlait. We focus on causal relationship
 2. web-search [[link]](https://trends.google.co.jp/trends/)
 3. chicken-dance, exercise [[link]](http://mocap.cs.cmu.edu/)
 
-(Other than `1. covid19`, everything is placed in the folder [`./data`](https://github.com/C-Naoki/ModePlait/blob/main/data))
+- Other than `1. covid19`, everything is placed in the folder [`./data`](https://github.com/C-Naoki/ModePlait/blob/main/data)
+- If you execute the command `sh bin/covid19.sh`, the `1. covid19` is automatically downloaded from Google COVID-19 Open Data Repository and placed in the folder `./data`.
 
 ## Experiments
 ### Baselines
-We compared our algorithm with the following baselines for causal discovering, including CASPER, DARING, NoCurl, NOTEARS-MLP (NO-MLP), NOTEARS, LiNGAM, and GES.
-We also compared with TimesNet, PatchTST, DeepAR, OrbitMap, and ARIMA for forecasting.
+We compared our algorithm with the following seven state-of-the-art baselines for causal discovering, namely CASPER, DARING, NoCurl, NOTEARS-MLP (NO-MLP), NOTEARS, LiNGAM, and GES.
+We also compared with the following five leading competitors in time series forecasting, namely TimesNet, PatchTST, DeepAR, OrbitMap, and ARIMA.
 
-### Causal discovering accuracy score
+### Q1. Causal discovering
 We ran experiments on synthetic datasets with multiple temporal sequences to encompass various types of scenarios and ModePlait outperformed all competitors for every setting.
 
 <p align="center">
   <img src=".\docs\assets\causal.png" align=center />
 </p>
 
-### Forecasting accuracy score
-ModePlait achieved a high forecasting accuracy for every dataset, including synthetic and real-world datasets. ModePlait† is a limited version of our proposed method.
+### Q2. Forecasting
+ModePlait achieved a high forecasting accuracy for every dataset, including synthetic and real-world datasets.
 
 <p align="center">
   <img src=".\docs\assets\forecasting.png" align=center />
 </p>
+
+### Q3. Ablation study
+We can see that discovering the time-evolving causality adaptively is very helpful when forecasting in a streaming fashion.
+
+<p align="center">
+  <img src=".\docs\assets\ablation-study.png" align=center />
+</p>
+
+
+### Experimental setup
+We conducted all above experiments on an Intel Xeon Platinum 8268 2.9GHz quad core CPU with 512GB of memory and running Linux.
