@@ -10,6 +10,7 @@
   - [Q2. Forecasting](#q2-forecasting)
   - [Q3. Ablation study](#q3-ablation-study)
   - [Experimental setup](#experimental-setup)
+- [Contact](#contact)
 
 ## Introduction
 This is an official implementation of ModePlait. We focus on causal relationships that evolve over time in data streams and refer such relationships as "time-evolving causality." We presented ModePlait, which aims to discover time-evolving causalities in multivariate co-evolving data streams, and forecast future values in a stream fashion simultaneously. The overview of our proposed model is following:
@@ -29,7 +30,7 @@ This is an official implementation of ModePlait. We focus on causal relationship
 ## Usage
 1. Clone this repository.
     ```bash
-    git clone https://github.com/C-Naoki/ModePlait.git
+    curl -o modeplait.zip https://anonymous.4open.science/api/repo/ModePlait-CB24/zip
     ```
 2. Construct a virtual environment and install the required packages.
     ```bash
@@ -39,12 +40,12 @@ This is an official implementation of ModePlait. We focus on causal relationship
     - If you prefer not to use pyenv or poetry, you can also use [`requirements.txt`](https://github.com/C-Naoki/ModePlait/blob/main/requirements.txt) created based on pyproject.toml.
 
     Specifically, the above command performs the following steps:
-      1. if necessary, install Python 3.9.15 using pyenv, and then switch to this version.
-      2. tell poetry to use python 3.9.15.
-      3. install packages in `pyproject.toml`.
-      4. attach the path file (i.e., `*.pth`) in the `site-packages/` for extending module search path.
+    1. if necessary, install Python 3.9.15 using pyenv, and then switch to this version.
+    2. tell poetry to use python 3.9.15.
+    3. install packages in `pyproject.toml`.
+    4. attach the path file (i.e., `*.pth`) in the `site-packages/` for extending module search path.
 
-      Please check the [`Makefile`](https://github.com/C-Naoki/ModePlait/blob/main/Makefile) for more details.
+    Please check the [`Makefile`](https://github.com/C-Naoki/ModePlait/blob/main/Makefile) for more details.
 
 3. Run quick demos of ModePlait
     ```bash
@@ -91,6 +92,8 @@ We can see that discovering the time-evolving causality adaptively is very helpf
   <img src=".\docs\assets\ablation-study.png" align=center />
 </p>
 
-
 ### Experimental setup
 We conducted all above experiments on an Intel Xeon Platinum 8268 2.9GHz quad core CPU with 512GB of memory and running Linux.
+
+## Contact
+If you have any questions or concerns, please submit an [issue](https://github.com/C-Naoki/ModePlait/issues) or contact us (naoki88@sanken.osaka-u.ac).
