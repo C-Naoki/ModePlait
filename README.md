@@ -10,7 +10,8 @@ We focus on causal relationships that evolve over time in data streams and refer
 </p>
 
 ## Requirements
-- Python 3.9.15
+This source code is tested with the following dependencies:
+- Python == 3.9.15
 - numpy == 1.23.5
 - pandas == 1.5.3
 - matplotlib == 3.8.2
