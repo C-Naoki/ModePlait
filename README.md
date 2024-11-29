@@ -1,19 +1,9 @@
-# ModePlait
+# ModePlait: Modeling Time-Evolving Causality over Data Streams
 
-- [Introduction](#introduction)
-- [Requirements](#requirements)
-- [Usage](#usage)
-- [Datasets](#datasets)
-- [Experiments](#experiments)
-  - [Baselines](#baselines)
-  - [Q1. Causal discovering](#q1-causal-discovering)
-  - [Q2. Forecasting](#q2-forecasting)
-  - [Q3. Ablation study](#q3-ablation-study)
-  - [Experimental setup](#experimental-setup)
-- [Contact](#contact)
+Implementation of "Modeling Time-Evolving Causality over Data Streams," Naoki Chihara, Yasuko Matsubara, Ren Fujiwara, and Yasushi Sakurai. The 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining, [KDD2025](https://kdd2025.kdd.org/) (to appear).
 
 ## Introduction
-This is an official implementation of ModePlait. We focus on causal relationships that evolve over time in data streams and refer such relationships as "time-evolving causality." We presented ModePlait, which aims to discover time-evolving causalities in multivariate co-evolving data streams, and forecast future values in a stream fashion simultaneously. The overview of our proposed model is following:
+We focus on causal relationships that evolve over time in data streams and refer such relationships as "time-evolving causality." We presented ModePlait, which aims to discover time-evolving causalities in multivariate co-evolving data streams, and forecast future values in a stream fashion simultaneously. The overview of our proposed model is following:
 
 <p align="center">
   <img src=".\docs\assets\model.png" align=center />
@@ -30,14 +20,14 @@ This is an official implementation of ModePlait. We focus on causal relationship
 ## Usage
 1. Clone this repository.
     ```bash
-    curl -o modeplait.zip https://anonymous.4open.science/api/repo/ModePlait-CB24/zip
+    git clone https://github.com/C-Naoki/ModePlait.git
     ```
 2. Construct a virtual environment and install the required packages.
     ```bash
     make install
     ```
-    - However, you are required to [pyenv](https://github.com/pyenv/pyenv#installation) and [poetry](https://python-poetry.org/docs/#installation) for above command to work.
-    - If you prefer not to use pyenv or poetry, you can also use [`requirements.txt`](https://github.com/C-Naoki/ModePlait/blob/main/requirements.txt) created based on pyproject.toml.
+    - Note that it requires to [pyenv](https://github.com/pyenv/pyenv#installation) and [poetry](https://python-poetry.org/docs/#installation).
+    - If you prefer not to use them, you can also use [`requirements.txt`](https://github.com/C-Naoki/ModePlait/blob/main/requirements.txt) created based on pyproject.toml.
 
     Specifically, the above command performs the following steps:
     1. if necessary, install Python 3.9.15 using pyenv, and then switch to this version.
@@ -63,8 +53,8 @@ This is an official implementation of ModePlait. We focus on causal relationship
 2. web-search [[link]](https://trends.google.co.jp/trends/)
 3. chicken-dance, exercise [[link]](http://mocap.cs.cmu.edu/)
 
-- Other than `1. covid19`, everything is placed in the folder [`./data`](https://github.com/C-Naoki/ModePlait/blob/main/data)
-- If you execute the command `sh bin/covid19.sh`, the `1. covid19` is automatically downloaded from Google COVID-19 Open Data Repository and placed in the folder `./data`.
+- All datasets except `1. covid19` are placed in the folder [`./data`](https://github.com/C-Naoki/ModePlait/blob/main/data)
+- If you execute the command `sh bin/covid19.sh`, the `1. covid19` is automatically downloaded from [Google COVID-19 Open Data Repository](https://health.google.com/covid-19/open-data/raw-data) and saved in the folder `./data`.
 
 ## Experiments
 ### Baselines
@@ -79,7 +69,7 @@ We ran experiments on synthetic datasets with multiple temporal sequences to enc
 </p>
 
 ### Q2. Forecasting
-ModePlait achieved a high forecasting accuracy for every dataset, including synthetic and real-world datasets.
+ModePlait achieved a high forecasting accuracy for every dataset, including both synthetic and real-world datasets.
 
 <p align="center">
   <img src=".\docs\assets\forecasting.png" align=center />
@@ -95,5 +85,8 @@ We can see that discovering the time-evolving causality adaptively is very helpf
 ### Experimental setup
 We conducted all above experiments on an Intel Xeon Platinum 8268 2.9GHz quad core CPU with 512GB of memory and running Linux.
 
-## Contact
-If you have any questions or concerns, please submit an [issue](https://github.com/C-Naoki/ModePlait/issues) or contact us (naoki88@sanken.osaka-u.ac).
+## Citation
+If you use this code for your research, please consider citing our paper.
+```bibtex
+
+```
