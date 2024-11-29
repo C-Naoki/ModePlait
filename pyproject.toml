@@ -2,7 +2,7 @@
 name = "ModePlait"
 version = "0.1.0"
 description = ""
-authors = ["anonymous"]
+authors = ["Naoki Chihara"]
 readme = "README.md"
 package-mode = false
 
@@ -95,7 +95,7 @@ warn_redundant_casts = true
 
 [tool.sphinx-pyproject]
 project = "ModePlait"
-copyright = "2023, anonymous"
+copyright = "2024, Naoki Chihara"
 language = "en"
 package_root = "ModePlait"
 html_theme = "sphinx_rtd_theme"
