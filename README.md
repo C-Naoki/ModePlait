@@ -9,6 +9,12 @@ We focus on causal relationships that evolve over time in data streams and refer
   <img src=".\docs\assets\model.png" align=center />
 </p>
 
+The following preview of our results shows the effectiveness of ModePlait over an epidemiological data stream. We would refer you to our paper for more details of these results and proposed methods.
+
+<p align="center">
+  <img src=".\docs\assets\crown_jewel.png" align=center width=400 />
+</p>
+
 ## Requirements
 This source code is tested with the following dependencies:
 - Python == 3.9.15
