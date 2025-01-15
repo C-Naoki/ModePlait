@@ -23,6 +23,10 @@ This source code is tested with the following dependencies:
 - matplotlib == 3.8.2
 - scikit-learn == 1.1.3
 - scipy == 1.11.4
+- cdt == 0.6.0
+> [!NOTE]
+> Note that some functions in the cdt load and execute R packages.
+> So, you need to set it up according to this [official document](https://fentechsolutions.github.io/CausalDiscoveryToolbox/html/utils.html).
 
 ## Usage
 1. Clone this repository.
