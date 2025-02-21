@@ -1,5 +1,10 @@
 # ModePlait: Modeling Time-Evolving Causality over Data Streams
 
+[![Python 3.9](https://img.shields.io/badge/Python-3.9-blue.svg)](https://www.python.org/downloads/release/python-3915/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![arXiv](https://img.shields.io/badge/arXiv-2502.08963-b31b1b.svg)](https://arxiv.org/abs/2502.08963)
+[![DOI](https://img.shields.io/badge/DOI-10.1145/3690624.3709283-fbb631.svg)](https://doi.org/10.1145/3690624.3709283)
+
 Implementation of "Modeling Time-Evolving Causality over Data Streams," Naoki Chihara, Yasuko Matsubara, Ren Fujiwara, and Yasushi Sakurai. The 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining, [KDD2025](https://kdd2025.kdd.org/) (to appear).
 
 ## Introduction
