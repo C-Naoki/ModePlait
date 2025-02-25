@@ -11,13 +11,13 @@ Implementation of "Modeling Time-Evolving Causality over Data Streams," Naoki Ch
 We focus on causal relationships that evolve over time in data streams and refer such relationships as "time-evolving causality." We presented ModePlait, which aims to discover time-evolving causalities in multivariate co-evolving data streams, and forecast future values in a stream fashion simultaneously. The overview of our proposed model is following:
 
 <p align="center">
-  <img src=".\docs\assets\model.png" align=center />
+  <img src="./docs/assets/model.png" alt="Illustration of ModePlait" />
 </p>
 
 The following preview of our results shows the effectiveness of ModePlait over an epidemiological data stream. We would refer you to our paper for more details of these results and proposed methods.
 
 <p align="center">
-  <img src=".\docs\assets\crown_jewel.png" align=center width=400 />
+  <img src="./docs/assets/crown_jewel.png" style="width: 400px;" alt="Crown Jewel">
 </p>
 
 ## Requirements
@@ -81,25 +81,25 @@ We also compared with the following five leading competitors in time series fore
 We ran experiments on synthetic datasets with multiple temporal sequences to encompass various types of scenarios and ModePlait outperformed all competitors for every setting.
 
 <p align="center">
-  <img src=".\docs\assets\causal.png" align=center />
+  <img src="./docs/assets/causal.png" alt="Causal discovery results" />
 </p>
 
 ### Q2. Forecasting
 ModePlait achieved a high forecasting accuracy for every dataset, including both synthetic and real-world datasets.
 
 <p align="center">
-  <img src=".\docs\assets\forecasting.png" align=center />
+  <img src="./docs/assets/forecasting.png" alt="Multivariate forecasting results" />
 </p>
 
 ### Q3. Ablation study
 We can see that discovering the time-evolving causality adaptively is very helpful when forecasting in a streaming fashion.
 
 <p align="center">
-  <img src=".\docs\assets\ablation-study.png" align=center />
+  <img src="./docs/assets/ablation-study.png" alt="Ablation study results" />
 </p>
 
 ### Experimental setup
-We conducted all above experiments on an Intel Xeon Platinum 8268 2.9GHz quad core CPU with 512GB of memory and running Linux.
+We conducted all above experiments on an Intel Xeon Platinum 8268 2.9GHz quad-core CPU with 512GB of memory and running Linux.
 
 ## Citation
 If you use this code for your research, please consider citing our paper.
