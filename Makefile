@@ -3,7 +3,7 @@ PYTHON_VERSION = 3.9.15
 .PHONY: install
 install: check_pyenv check_poetry pyenv_setup poetry_setup
 	@VENV_PATH=$$(poetry env info --path); \
-	SITE_PACKAGES_DIR="$${VENV_PATH}/lib/python3.10/site-packages"; \
+	SITE_PACKAGES_DIR="$${VENV_PATH}/lib/python3.9/site-packages"; \
 	PROJECT_ROOT=$$(echo $${VENV_PATH} | rev | cut -d'/' -f2- | rev); \
 	VENV_NAME=$$(basename `dirname $${VENV_PATH}`); \
 	echo $${PROJECT_ROOT} > $${SITE_PACKAGES_DIR}/$${VENV_NAME}.pth

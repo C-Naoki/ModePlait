@@ -35,7 +35,7 @@ def main(cfg: DictConfig) -> None:
     B_true = None
     if cfg.io.input_dir == "synthetics":
         data, B_true = data
-    data = preprocessing(data=data, prep_cfg=cfg.prep)
+    data = preprocessing(data=data, cfg=cfg)
 
     print(f"DATASETS: {cfg.io.input_dir}_{cfg.io.uuid}")
     print(f"PREPROCESSED: {data.shape}")
