@@ -1,11 +1,12 @@
 # ModePlait: Modeling Time-Evolving Causality over Data Streams
 
 [![Python 3.9](https://img.shields.io/badge/Python-3.9-blue.svg)](https://www.python.org/downloads/release/python-3915/)
+[![Poetry](https://img.shields.io/badge/poetry-1.8-299bd7?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAASCAYAAABrXO8xAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJJSURBVHgBfZLPa1NBEMe/s7tNXoxW1KJQKaUHkXhQvHgW6UHQQ09CBS/6V3hKc/AP8CqCrUcpmop3Cx48eDB4yEECjVQrlZb80CRN8t6OM/teagVxYZi38+Yz853dJbzoMV3MM8cJUcLMSUKIE8AzQ2PieZzFxEJOHMOgMQQ+dUgSAckNXhapU/NMhDSWLs1B24A8sO1xrN4NECkcAC9ASkiIJc6k5TRiUDPhnyMMdhKc+Zx19l6SgyeW76BEONY9exVQMzKExGKwwPsCzza7KGSSWRWEQhyEaDXp6ZHEr416ygbiKYOd7TEWvvcQIeusHYMJGhTwF9y7sGnSwaWyFAiyoxzqW0PM/RjghPxF2pWReAowTEXnDh0xgcLs8l2YQmOrj3N7ByiqEoH0cARs4u78WgAVkoEDIDoOi3AkcLOHU60RIg5wC4ZuTC7FaHKQm8Hq1fQuSOBvX/sodmNJSB5geaF5CPIkUeecdMxieoRO5jz9bheL6/tXjrwCyX/UYBUcjCaWHljx1xiX6z9xEjkYAzbGVnB8pvLmyXm9ep+W8CmsSHQQY77Zx1zboxAV0w7ybMhQmfqdmmw3nEp1I0Z+FGO6M8LZdoyZnuzzBdjISicKRnpxzI9fPb+0oYXsNdyi+d3h9bm9MWYHFtPeIZfLwzmFDKy1ai3p+PDls1Llz4yyFpferxjnyjJDSEy9CaCx5m2cJPerq6Xm34eTrZt3PqxYO1XOwDYZrFlH1fWnpU38Y9HRze3lj0vOujZcXKuuXm3jP+s3KbZVra7y2EAAAAAASUVORK5CYII=)](https://python-poetry.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![arXiv](https://img.shields.io/badge/arXiv-2502.08963-b31b1b.svg)](https://arxiv.org/abs/2502.08963)
 [![DOI](https://img.shields.io/badge/DOI-10.1145/3690624.3709283-fbb631.svg)](https://doi.org/10.1145/3690624.3709283)
 
-Implementation of "Modeling Time-Evolving Causality over Data Streams," Naoki Chihara, Yasuko Matsubara, Ren Fujiwara, and Yasushi Sakurai. The 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining, [KDD2025](https://kdd2025.kdd.org/) (to appear).
+Implementation of "Modeling Time-Evolving Causality over Data Streams," Naoki Chihara, Yasuko Matsubara, Ren Fujiwara, and Yasushi Sakurai. The 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining, [KDD2025](https://kdd2025.kdd.org/).
 
 ## Introduction
 We focus on causal relationships that evolve over time in data streams and refer such relationships as "time-evolving causality." We presented ModePlait, which aims to discover time-evolving causalities in multivariate co-evolving data streams, and forecast future values in a stream fashion simultaneously. The overview of our proposed model is following:
@@ -104,5 +105,18 @@ We conducted all above experiments on an Intel Xeon Platinum 8268 2.9GHz quad-co
 ## Citation
 If you use this code for your research, please consider citing our paper.
 ```bibtex
-
+@inproceedings{chihara2025modeplait,
+author = {Chihara, Naoki and Matsubara, Yasuko and Fujiwara, Ren and Sakurai, Yasushi},
+title = {Modeling Time-evolving Causality over Data Streams},
+year = {2025},
+isbn = {9798400712456},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+doi = {10.1145/3690624.3709283},
+booktitle = {Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.1},
+pages = {153–164},
+numpages = {12},
+location = {Toronto ON, Canada},
+series = {KDD '25}
+}
 ```
